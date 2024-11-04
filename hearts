@@ -1,0 +1,11 @@
+# This function takes a message as input,
+# and then creates a file called [message].txt, open("ASCII art/pyramid.txt", "x").close()
+# which contains ASCII art from the custom message.
+def lovemsg(message):
+    filename = f"ASCII art/{message}.txt"
+    lmsg = len(message)
+    with open(filename, "w") as file:
+            hearts = "♡" * lmsg
+            file.write(hearts + "\n" + "♡" + message + "♡" + "\n" + hearts)
+
+lovemsg("my name is mimi and this sentence is surrounded by little hearts")
